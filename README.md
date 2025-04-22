@@ -38,6 +38,20 @@
     .project h3 {
       margin: 10px 0;
     }
+
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: white;
+      background-color: #007bff;
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+
+    .project a:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
@@ -47,12 +61,10 @@
     <div class="project">
       <img src="images/Snowflake Dashboard.png" alt="Snowflake Dashboard" />
       <h3>Snowflake Dashboard</h3>
-      <p>Dashboard interativo construído a partir de dados do Snowflake, utilizando ferramentas de BI para visualização de métricas-chave.</p>
-      <a href="https://github.com/Cmagno13/seu-projeto">Ver mais</a>
+      <p>Dashboard interativo construído a partir de dados do Google Analytics integrados ao Snowflake, com visualizações em ferramentas de BI.</p>
+      <a href="https://github.com/Cmagno13/Full-Cycle-ETL-Analytics-with-Google-Analytics-and-Snowflake-main" target="_blank">Ver Projeto no GitHub</a>
     </div>
 
-    <!-- Você pode duplicar o bloco acima para adicionar mais projetos -->
-    
   </div>
 </body>
 </html>
