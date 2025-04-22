@@ -2,86 +2,148 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio de Ciência de Dados</title>
+  <title>Carlos Magno Ribeiro | Cientista de Dados</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #1c1c1c, #333);
       color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .card {
+      background-color: #222;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      max-width: 400px;
+      width: 90%;
     }
 
     h1 {
-      text-align: center;
-      color: #f0f0f0;
+      font-size: 28px;
+      margin-bottom: 10px;
     }
 
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    h2 {
+      font-size: 18px;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      color: white;
+      background-color: #0077b5;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #005582;
+    }
+
+    .cv {
+      background-color: #28a745 !important;
+    }
+
+    .cv:hover {
+      background-color: #1e7e34 !important;
+    }
+
+    .viz-icons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
       gap: 20px;
-      padding: 20px;
+    }
+
+    .viz-icons img {
+      width: 50px;
+      height: 50px;
+      opacity: 0.9;
     }
 
     .project {
-      border: 1px solid #444;
-      border-radius: 8px;
-      padding: 15px;
-      background-color: #222;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      margin-top: 40px;
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
     }
 
     .project img {
       max-width: 100%;
+      height: auto;
       border-radius: 8px;
     }
 
-    .project h3 {
-      margin: 10px 0;
-      color: #ffffff;
-    }
-
-    .project p {
-      color: #cccccc;
-    }
-
     .project a {
-      display: inline-block;
-      margin-top: 10px;
+      color: #0077b5;
       text-decoration: none;
-      color: white;
-      background-color: #007bff;
-      padding: 8px 12px;
-      border-radius: 4px;
       font-weight: bold;
     }
 
     .project a:hover {
-      background-color: #0056b3;
+      color: #005582;
     }
 
     @media (max-width: 480px) {
       h1 {
         font-size: 24px;
       }
-      .project {
-        padding: 10px;
+      h2 {
+        font-size: 16px;
+      }
+      .buttons a {
+        font-size: 14px;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Portfólio de Ciência de Dados</h1>
-  <div class="portfolio">
+  <div class="card">
+    <h1>Carlos Magno Ribeiro</h1>
+    <h2>Cientista de Dados | Especialista em DataViz</h2>
+    <p>Transformando dados em decisões com visualizações inteligentes.</p>
     
+    <div class="buttons">
+      <a href="https://www.linkedin.com/in/carlos-magno-ribeiro-a6b7b043/" target="_blank">🔗 LinkedIn</a>
+      <a href="Carlos_Magno_Ribeiro_CV.pdf" class="cv" download>📄 Baixar Currículo (PDF)</a>
+    </div>
+
+    <div class="viz-icons">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/combo-chart.png" alt="Gráfico 1"/>
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/pie-chart.png" alt="Gráfico 2"/>
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/bar-chart.png" alt="Gráfico 3"/>
+    </div>
+
+    <!-- Novo Projeto Adicionado -->
     <div class="project">
       <img src="images/Snowflake Dashboard.png" alt="Snowflake Dashboard" />
       <h3>Snowflake Dashboard</h3>
       <p>Dashboard interativo construído a partir de dados do Google Analytics integrados ao Snowflake, com visualizações em ferramentas de BI.</p>
       <a href="https://github.com/Cmagno13/Full-Cycle-ETL-Analytics-with-Google-Analytics-and-Snowflake-main" target="_blank">Ver Projeto no GitHub</a>
     </div>
-
   </div>
 </body>
 </html>
