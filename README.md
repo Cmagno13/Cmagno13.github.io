@@ -11,19 +11,34 @@
       margin: 0;
       padding: 0;
       display: flex;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
+      min-height: 100vh;
       text-align: center;
     }
 
-    .card {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 1200px;
+      gap: 30px;
+    }
+
+    .left-column {
+      width: 45%;
       background-color: #222;
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-      max-width: 400px;
-      width: 90%;
+    }
+
+    .right-column {
+      width: 45%;
+      background-color: #222;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
     }
 
     h1 {
@@ -70,20 +85,6 @@
       background-color: #1e7e34 !important;
     }
 
-    .viz-icons {
-      margin-top: 40px;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .viz-icons img {
-      width: 50px;
-      height: 50px;
-      opacity: 0.9;
-    }
-
     .project {
       margin-top: 40px;
       background-color: #333;
@@ -107,42 +108,71 @@
       color: #005582;
     }
 
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 24px;
+    .viz-icons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .viz-icons img {
+      width: 50px;
+      height: 50px;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
       }
-      h2 {
-        font-size: 16px;
-      }
-      .buttons a {
-        font-size: 14px;
+
+      .left-column, .right-column {
+        width: 90%;
       }
     }
+
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Carlos Magno Ribeiro</h1>
-    <h2>Cientista de Dados | Especialista em DataViz</h2>
-    <p>Transformando dados em decisões com visualizações inteligentes.</p>
-    
-    <div class="buttons">
-      <a href="https://www.linkedin.com/in/carlos-magno-ribeiro-a6b7b043/" target="_blank">🔗 LinkedIn</a>
-      <a href="Carlos_Magno_Ribeiro_CV.pdf" class="cv" download>📄 Baixar Currículo (PDF)</a>
+  <div class="container">
+    <!-- Coluna Esquerda - Apresentação, Carreira e Contatos -->
+    <div class="left-column">
+      <h1>Carlos Magno Ribeiro</h1>
+      <h2>Cientista de Dados | Especialista em DataViz</h2>
+      <p>Transformando dados em decisões com visualizações inteligentes. Com experiência em ETL, BI e análise de dados, busco soluções inovadoras para negócios.</p>
+      
+      <div class="buttons">
+        <a href="https://www.linkedin.com/in/carlos-magno-ribeiro-a6b7b043/" target="_blank">🔗 LinkedIn</a>
+        <a href="Carlos_Magno_Ribeiro_CV.pdf" class="cv" download>📄 Baixar Currículo (PDF)</a>
+      </div>
     </div>
 
-    <div class="viz-icons">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/combo-chart.png" alt="Gráfico 1"/>
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/pie-chart.png" alt="Gráfico 2"/>
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/bar-chart.png" alt="Gráfico 3"/>
-    </div>
+    <!-- Coluna Direita - Portfólio e Projetos -->
+    <div class="right-column">
+      <h3>Portfólio</h3>
 
-    <!-- Novo Projeto Adicionado -->
-    <div class="project">
-      <img src="images/Snowflake Dashboard.png" alt="Snowflake Dashboard" />
-      <h3>Snowflake Dashboard</h3>
-      <p>Dashboard interativo construído a partir de dados do Google Analytics integrados ao Snowflake, com visualizações em ferramentas de BI.</p>
-      <a href="https://github.com/Cmagno13/Full-Cycle-ETL-Analytics-with-Google-Analytics-and-Snowflake-main" target="_blank">Ver Projeto no GitHub</a>
+      <div class="project">
+        <img src="https://github.com/Cmagno13/Portifoliio-Apache-Superset/blob/main/indicadores-pmrs-2025-02-21T17-00-45.393Z.jpg?raw=true" alt="Projeto 1"/>
+        <h4>Indicadores PMRS</h4>
+        <p>Visualização de indicadores de performance utilizando Apache Superset, com integração ao Snowflake e outras fontes de dados.</p>
+        <a href="https://github.com/Cmagno13/Portifoliio-Apache-Superset" target="_blank">Ver Projeto no GitHub</a>
+      </div>
+
+      <div class="project">
+        <img src="https://github.com/Cmagno13/Portifoliio-Apache-Superset/blob/main/indicadores-pmrs-2025-02-21T17-01-02.734Z.jpg?raw=true" alt="Projeto 2"/>
+        <h4>Indicadores PMRS - 2ª Imagem</h4>
+        <p>Mais uma visualização de indicadores no Apache Superset, com dashboard interativo e filtros dinâmicos.</p>
+        <a href="https://github.com/Cmagno13/Portifoliio-Apache-Superset" target="_blank">Ver Projeto no GitHub</a>
+      </div>
+
+      <div class="project">
+        <img src="https://github.com/Cmagno13/Portifoliio-Apache-Superset/blob/main/custo-de-producao-agricola-companhia-nacional-de-abastecimento-poc-004-2025-02-21T18-07-01.611Z.jpg?raw=true" alt="Projeto 3"/>
+        <h4>Custo de Produção Agrícola</h4>
+        <p>Projeto de análise de custo de produção agrícola para a Companhia Nacional de Abastecimento, utilizando Apache Superset e PostgreSQL.</p>
+        <a href="https://github.com/Cmagno13/Portifoliio-Apache-Superset" target="_blank">Ver Projeto no GitHub</a>
+      </div>
     </div>
   </div>
 </body>
