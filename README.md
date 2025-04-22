@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -11,8 +12,8 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: center; /* Mantido para centralizar o bloco, ajuste se quiser alinhar à esquerda */
+      align-items: flex-start; /* Ajustado para alinhar o conteúdo no topo em vez de centralizar verticalmente */
       min-height: 100vh;
       text-align: center;
     }
@@ -20,40 +21,45 @@
     .container {
       display: flex;
       justify-content: space-between;
-      width: 90%;
-      max-width: 1200px;
-      gap: 30px;
+      width: 95%; /* Aumente a porcentagem para usar mais da largura da tela */
+      max-width: 1600px; /* Aumente o max-width ou remova esta linha para não ter um limite fixo */
+      gap: 40px; /* Opcional: Aumentar o espaço entre as colunas */
+      margin-top: 30px; /* Adiciona um pouco de espaço no topo para não colar */
+      margin-bottom: 30px; /* Adiciona um pouco de espaço na parte inferior */
     }
 
     .left-column {
-      width: 45%;
+      width: 48%; /* Aumente a porcentagem */
       background-color: #222;
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
     }
 
     .right-column {
-      width: 45%;
+      width: 48%; /* Aumente a porcentagem */
       background-color: #222;
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 32px; /* Exemplo: aumentar o tamanho do título principal */
       margin-bottom: 10px;
     }
 
     h2 {
-      font-size: 18px;
+      font-size: 20px; /* Exemplo: aumentar o tamanho do subtítulo */
       color: #aaa;
       margin-bottom: 20px;
     }
 
     p {
       font-style: italic;
+      font-size: 16px; /* Exemplo: aumentar o tamanho do parágrafo */
       margin-bottom: 30px;
     }
 
@@ -126,10 +132,12 @@
       .container {
         flex-direction: column;
         align-items: center;
+        width: 95%; /* Garante que use uma boa parte da tela menor */
+        gap: 30px; /* Espaço entre as colunas na visão mobile */
       }
 
       .left-column, .right-column {
-        width: 90%;
+        width: 95%; /* Ocupa quase toda a largura na visão mobile */
       }
     }
 
@@ -137,19 +145,17 @@
 </head>
 <body>
   <div class="container">
-    <!-- Coluna Esquerda - Apresentação, Carreira e Contatos -->
     <div class="left-column">
       <h1>Carlos Magno Ribeiro</h1>
       <h2>Cientista de Dados | Especialista em DataViz</h2>
       <p>Transformando dados em decisões com visualizações inteligentes. Com experiência em ETL, BI e análise de dados, busco soluções inovadoras para negócios.</p>
-      
+
       <div class="buttons">
         <a href="https://www.linkedin.com/in/carlos-magno-ribeiro-a6b7b043/" target="_blank">🔗 LinkedIn</a>
         <a href="Carlos_Magno_Ribeiro_CV.pdf" class="cv" download>📄 Baixar Currículo (PDF)</a>
       </div>
     </div>
 
-    <!-- Coluna Direita - Portfólio e Projetos -->
     <div class="right-column">
       <h3>Portfólio</h3>
 
